@@ -194,7 +194,6 @@ div.separator-dash {
 .center-column {
     display: flex;
     flex-direction: column;
-    align-self: center;
     justify-content: center;
     max-width: 50%;
     width: 100%;
@@ -318,9 +317,9 @@ div.separator-dash {
     list-style-type: none;
     text-align: center;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     gap: 0.5rem;
-    padding: 0;
+    padding: 0.75em;
     margin: 0;
 }
 
@@ -364,7 +363,7 @@ div.separator-dash {
 
 .weblink-list {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     /* other */
     list-style-type: none;
@@ -440,4 +439,28 @@ ul {
     justify-content: space-around;
     align-items: center;
     border-radius: 8px;
+}
+
+@media screen and (max-width: 796px) {
+    
+    .main-content {
+        flex-direction: column;
+    }
+
+    .left-column {
+        max-width: 100%;
+    }
+    
+    .center-column {
+        max-width: 100%;
+    }
+
+    .resume-container {
+        display: none;
+    }
+
+    .right-column {
+        max-width: 100%;
+    }
+
 }
