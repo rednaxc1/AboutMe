@@ -344,9 +344,22 @@ div.separator-dash {
     border-radius: 50%;
 }
 
+.certificates-list li img.photoshop-badge-cert {
+    text-decoration: none;
+    font-size: 1rem;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 .certificates-list li img:hover {
-  transform: scale(2.5); /* Makes the image 50% larger on hover */
-  transition: transform 0.3s ease-in-out; /* Smoothly animates the size change */
+    transform: scale(2.5); /* Makes the image 250% larger on hover */
+    transition: transform 0.3s ease-in-out; /* Smoothly animates the size change */
+}
+
+.certificates-list li img.photoshop-badge-cert:hover {
+    background-color: var(--link-blue);
 }
 /* end of certificates owned */
 
