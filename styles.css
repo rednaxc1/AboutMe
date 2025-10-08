@@ -271,7 +271,7 @@ div.separator-dash {
 .right-column {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.30rem;
     max-width: 25%;
     height: fit-content;
 }
