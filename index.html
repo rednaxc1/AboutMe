@@ -1,68 +1,232 @@
 <!-- Sample HTML Document Structure -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Profile</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+        <title>My Profile</title>
+        <link rel="stylesheet" href="/styling/styles.css">
+    </head>
 <body class="body-main body-page">
-    <main class="main-content">
-        <section class="left-column">
-            <div class="name-img">
-                <h1>Alexander Corrigan's Profile</h1>
-                <img src="media/xander1.jpg" alt="Profile image of Alexander Corrigan" class="profile-img">
-            </div>
+    <nav class="main-nav-sticky">
+        <div class="name-img">
+            <img src="media/xander1.jpg" alt="Profile Picture" class="profile-pic">
+            <h1>
+                Alexander Corrigan
+            </h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about-me">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="mailto:x@gmail.com" class="nav-btn">Contact</a></li>
+        </ul>
+    </nav>
 
-            <div class="profile-div card">
-                <h2>About Me</h2>
+    <main class="main-content">
+        <section class="about-section-featured-project">
+            <article class="about-article card background-cards">
+                <h2 id="about-me-description">Welcome to My Profile</h2>
                 <p>
-                    I’m Alexander Corrigan, specializing in web development and game design. Passionate about blending creativity with technology, I’m eager to explore new ideas and challenges.
+                    I’m <span class="gold">Alexander Corrigan</span>, a web developer and game designer dedicated to blending creativity with technical architecture. With a good foundation in HTML, CSS, JavaScript, C#, and C++. I thrive on solving complex challenges and building immersive digital experiences.
                 </p>
+                <p>
+                    Explore my portfolio to see how I combine these skills to bring innovative projects to life.
+                </p>
+            </article>
+
+            <!-- Start of Carousel -->
+            <div class="carousel-wrapper">
+                <!-- Clickable Arrows -->
+                <button class="carousel-arrow left-arrow" onclick="scrollCarousel(-1)">&#10094;</button>
+
+                <div class="carousel-track" id="projectTrack">
+                    <!-- Project One -->
+                    <article class="featured-project background-cards project-card">
+                        <!-- this is a test image -->
+                        <img src="media/temp-media/20260416194733_1.jpg" alt="The Veil Realms Screenshot"
+                        class="veil-realms-img">
+                        <h2 id="featured-project">
+                            Featured Project: <span class="gold">The Veil Realms</span>
+                        </h2>
+                        <p>
+                            The Veil Realms is a multi-genre tutorial designed to teach fundamental skills that help new players understand and improve on the respective genres of any game. Built with Unity and C#, it offers an engaging learning experience for gamers of all levels.
+                        </p>
+                        <p>
+                            <strong>Technologies:</strong> Unity, C#
+                        </p>
+                        <a href="https://github.com/rednaxc1/The-Veil-Realms" target="_blank">Immerse yourself with The Veil Realms</a>
+                    </article>
+
+                    <!-- Project Two -->
+                    <article class="featured-project background-cards project-card">
+                        <!-- this is a test image -->
+                        <img src="media/temp-media/20260416194733_1.jpg" alt="The Veil Realms Screenshot" class="escape-frost-img">
+                        <h2 id="featured-project">
+                            Featured Project: <span class="gold">Escape The Frost</span>
+                        </h2>
+                        <p>
+                            Survive a desolate, icy wasteland as a city scout in this 3D survival game where resource management is the key to longevity. Master strategic gear upgrades while navigating a harsh, atmospheric environment designed to test your instincts and exploration skills.
+                        </p>
+                        <p>
+                            <strong>Technologies:</strong> Unreal Engine V, C++
+                        </p>
+                        <a href="https://github.com/rednaxc1/EscapeTheFrost" target="_blank">View The Frost</a>
+                    </article>
+
+                    <!-- Project Three -->
+                    <article class="featured-project background-cards project-card">
+                        <!-- this is a test image -->
+                        <img src="media/temp-media/20260416194733_1.jpg" alt="Family Tree Creator Screenshot" class="family-tree-img">
+                        <h2 id="featured-project">
+                            Featured Project: <span class="gold">Family Tree Creator</span>
+                        </h2>
+                        <p>
+                           A web-based application designed to dynamically create and visualize family trees through an intuitive and interactive interface. Currently in active development, the platform allows users to map out complex ancestral lineages into a clear and organized visual map.
+                        </p>
+                        <p>
+                            <strong>Technologies:</strong> HTML, CSS, JavaScript
+                        </p>
+                        <a href="https://github.com/TradesmanBOB/Project-Family-Tree-Creator" target="_blank">Look on Family Tree Creator</a>
+                    </article>
+                </div>
+
+                <button class="carousel-arrow right-arrow" onclick="scrollCarousel(1)">&#10095;</button>
             </div>
-            <!-- Projects WIP and/or Live -->
-            <div class="projects-div card">
-                <h2>My Projects</h2>
-                <ul class="projects-list">
-                    <!-- Projects that contain hover boxes containing light explanations of what each project is -->
-                    <!-- The Veil Realms list item -->
-                    <li class="project-item">
-                        <span>The Veil Realms | <a href="https://github.com/rednaxc1/The-Veil-Realms" target="_blank">Learn More...</a></span>
-                        <div class="project-preview">
-                            <img src="media/veil-realms-placeholder.png" alt="The Veil Realms Screenshot">
-                            <h4>The Veil Realms</h4>
-                            <p>A multi-genre tutorial designed to teach fundamental skills that help new players improve at any game.</p>
-                            <p><strong>Technologies:</strong> Unity, C#</p>
+        </section>
+
+        <section class="credentialskill-testimonials-section">
+            <article class="cred-skill-chunk background-cards">
+                <div class="skills-section">
+                    <h2>
+                        My Skills
+                    </h2>
+                        <ul class="skills-list">
+                            <li>
+                                <strong>Web Languages (Web Dev):</strong> HTML, CSS, JavaScript, WordPress (PHP)
+                            </li>
+                            <li>
+                                <strong>App Languages (App Dev):</strong> C++, C#, Unity
+                            </li>
+                            <li>
+                                <strong>Creative:</strong> Video Game Design & Strategy
+                            </li>
+                        </ul>
+                </div>
+
+                <!-- Separator for visual clarity -->
+                 <hr class="credits-divider">
+
+                 <!-- certificates sub-section -->
+                  <div class="certificates-section">
+                    <h2 class="my-certificates-h2"
+                        >My Certificates
+                    </h2>
+                    <ul class="certificates-list">
+                        <li>
+                            <img src="media/wp-editor-150px.png" alt="HTML & CSS Certificate">
+                        </li>
+                        <li>
+                            <img src="media/wp-codespecialist-htmlcss.png" alt="JavaScript Certificate">
+                        </li>
+                        <li>
+                            <img class="photoshop-badge-cert" src="media/photoshop-badge-cert.png" alt="Web Design Certificate">
+                        </li>
+                        <li>
+                            <img src="media/softskills-badge-cert.png" alt="Soft Skills Certificate">
+                        </li>
+                        </ul>
+                  </div>
+            </article>
+
+            <article class="carousel-wrapper">
+                <!--
+                Clickable Arrows ---
+                <button class="carousel-arrow left-arrow" onclick="scrollCarousel(-1, 'testimonialTrack')">&#10094;</button>
+                -->
+                <div class="carousel-track" id="testimonialTrack">
+                <!-- Testimonial One -->
+                    <article class="featured-testimonial background-cards testimonial-card">
+                        <img src="media/temp-media/20260416194733_1.jpg" alt="Marianne Shaffer" class="shaffer-img">
+                        <h2>
+                            <span class="bold">Testimonial: </span><span class="gold">Marianne Shaffer</span>
+                        </h2>
+                        <h3 class="title">
+                            Web Development Instructor
+                        </h3>
+                        <p>
+                            "I highly recommend Alexander Corrigan from my Web Development program at Pinellas Technical College. His drive to master core technologies—like building a WordPress environment with Docker and MySQL—shows strong dedication. With multiple certifications, he’s well-prepared for his first developer role."
+                        </p>
+                    </article>
+
+                    <!-- Testimonial Two (placeholder for future testimonials) ---
+                    <article class="featured-testimonial background-cards testimonial-card">
+                        <img src="media/temp-media/20260416194733_1.jpg" alt="testimonial" class="testimonial-img">
+                        <h2>
+                            <span class="gold">Testimonial: </span>
+                        </h2>
+                        <h3 class="title">
+                            
+                        </h3>
+                        <p>
+
+                        </p>
+                    </article> -->
+                </div>
+                <!--
+                Clickable Arrows ---
+                <button class="carousel-arrow right-arrow" onclick="scrollCarousel(1)">&#10095;</button>
+                -->
+            </article>
+
+        </section>
+
+    <!-- Contact & Resume -->
+            <section class="contact-resume-section">
+                <article class="contact-card contact-container background-cards">
+                    <h2>
+                        My Contact Information
+                    </h2>
+                    <ul class="contact-list">
+                        <li>
+                            <p><strong><span class="gold"><a href="mailto:rednaxc1@gmail.com">Email Me</a></span></strong></p>
+                        </li>
+                        <li>
+                            <p><strong><span class="gold"><a href="https://www.linkedin.com/in/corrigan-alexander" target="_blank" rel="noopener">LinkedIn</a></span></strong></p>
+                        </li>
+                        <li>
+                            <p><strong><span class="gold"><a href="https://github.com/rednaxc1" target="_blank" rel="noopener">GitHub</a></span></strong></p>
+                        </li>
+                        <li>
+                            <p><strong><span class="gold"><a href="https://www.indeed.com" target="_blank" rel="noopener">Indeed</a></span></strong></p>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="resume-card resume-container background-cards">
+                    <h2>
+                        My Resume
+                    </h2>
+
+                    <embed src="resume/rednax-resume-pdf-3-19-26.pdf" type="application/pdf" width="100%" height="400px"/>
+
+                    <div class="buttons-open-downloader">
+                        <a href="resume/rednaxc-resume.pdf" target="_blank" rel="noopener" class="open-resume">Open Resume</a>
+
+                        <div class="separator-dash">
+                            |
                         </div>
-                    </li>
-                    <!-- Escape The Frost list item -->
-                    <li class="project-item">
-                        <span>Escape The Frost | <a href="https://github.com/rednaxc1/EscapeTheFrost" target="_blank">Learn More...</a></span>
-                        <div class="project-preview">
-                            <img src="media/escape-frost-placeholder.png" alt="scene from Escape The Frost">
-                            <h4>Escape The Frost</h4>
-                            <p>Survive a desolate, icy wasteland as a city scout in this 3D survival game. Manage resources, upgrade gear, and explore with your community.</p>
-                            <p><strong>Technologies:</strong> Unreal Engine V, C++</p>
-                        </div>
-                    </li>
-                    <!-- Family Tree Creator list item -->
-                    <li class="project-item">
-                        <span>Family Tree Creator | <a href="https://github.com/TradesmanBOB/Project-Family-Tree-Creator" target="_blank">Learn More...</a></span>
-                        <div class="project-preview">
-                            <img src="media/family-tree-placeholder.png" alt="Family Tree Creator Screenshot">
-                            <h4>Family Tree Creator</h4>
-                            <p>A web-based application to dynamically create and visualize family trees. (WIP, partially broken)</p>
-                            <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <!-- Education section -->
-            <div class="education card">
-                <h2>Education</h2>
-                <ul class="education-list">
+
+                        <a href="resume/rednaxc-resume.pdf" download class="download-resume">Download Resume</a>
+
+                    </div>
+                </article>
+
+
+<!--            <h2>Education</h2>
+                <ul class="f1c">
                     <li><p><strong>High School Diploma</strong><br>Clearwater Central Catholic<br>[Clearwater, Fl]<br>Graduated: May 2021</p></li>
                     <li><p><strong>Pinellas Technical College</strong><br>Web Development Program<br>[Clearwater, Fl]<br>Expected Completion: October 2025</p></li>
                 </ul>
@@ -82,7 +246,7 @@
                 <a href="resume/rednaxc-resume.pdf" download class="download-resume">Download Resume</a>
             </div>
         </section>
-
+        
         <section class="right-column">
             <div class="skills card">
                 <h2>My Skills</h2>
@@ -93,7 +257,7 @@
                 </ul>
             </div>
 
-            <!-- (in addition to current) Add .card class for shared styling -->
+            (in addition to current) Add .card class for shared styling -->
             <div class="the-timeline card">
                 <h2>The Timeline</h2>
                 <ul class="timeline-order">
@@ -104,39 +268,6 @@
                     <li>4) Applying for jobs.</li>
                 </ul>
             </div>
-            <!-- (new content) Uncommented and populated Testimonials section -->
-            <div class="testimonials card">
-                <h2>Top Testimonials</h2>
-                <ul class="testimonials-list">
-                    <li>
-                        <p>"I highly recommend Alexander Corrigan from my Web Development program at Pinellas Technical College. His drive to master core technologies—like building a WordPress environment with Docker and MySQL—shows strong dedication. With multiple certifications, he’s well-prepared for his first developer role."</p>
-                        <p class="character-name">- Marianne Shaffer, Web Development Instructor</p>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="certificates-container">
-                <h2 class="my-certificates-h2">My Certificates</h2>
-                <ul class="certificates-list">
-                    <li><img src="media/wp-editor-150px.png" alt="HTML & CSS Certificate"></li>
-                    <li><img src="media/wp-codespecialist-htmlcss.png" alt="JavaScript Certificate"></li>
-                    <li><img class="photoshop-badge-cert" src="media/photoshop-badge-cert.png" alt="Web Design Certificate"></li>
-                    <li><img src="media/softskills-badge-cert.png" alt="Web Design Certificate"></li>
-                </ul>
-            </div>
-
-            <div class="Weblink-profiles card">
-                <h2>Find Me Online</h2>
-                <ul class="weblink-list">
-                    <li><a href="https://github.com/rednaxc1" target="_blank" rel="noopener" class="github-repo-file">GitHub</a></li>
-
-                    <li><a href="https://www.linkedin.com/in/corrigan-alexander" class="linkedin-profile">LinkedIn</a></li>
-
-                    <li><a href="https://www.indeed.com" class="Indeed-profile">Indeed</a></li>
-                    
-                    <li><a href="mailto:rednaxc1@gmail.com">Contact Me</a></li>
-                </ul>
-            </div>
         </section>
     </main>
 
@@ -144,6 +275,10 @@
         <p>&copy; 2025 My Profile</p>
     </footer>
 
+    <script src="/JS/JavaScript.js"></script>
+
 </body>
+
+
 
 </html>

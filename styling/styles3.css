@@ -7,16 +7,18 @@
 /* Main Custom CSS */
 
 :root {
-    --body-bg-color: #000000;
-    --container-bg-color: #434343;
-    --text-color: #00e000;
+    --general-bg-color: #000000;
+    --container-bg-color: #3c3c3c;
+    --container-outline-color: #0098fd;
+    --text-color: #00c3ff;
     --gold-text: #FFD700;
     --link-blue: #00bbff;
     --link-background-blue-hover: #000070;
 }
 
+/* Global styles */
 .body-main {
-    background-color: var(--body-bg-color);
+    background-color: var(--general-bg-color);
     color: var(--text-color);
     margin: 0rem;
     padding: 0.5rem;
@@ -174,7 +176,6 @@ a {
 /* End of Education section styles */
 
 /* end of name-img */
-
 .name-img img {
     display: flex;
     align-items: center;
@@ -213,7 +214,7 @@ div.separator-dash {
 
 /* the buttons themselves */
 .buttons-open-downloader a {
-    background-color: var(--body-bg-color);
+    background-color: var(--general-bg-color);
     border: 1px solid var(--link-blue);
     padding: 0.5rem 1rem;
     border-radius: 5px;
@@ -263,6 +264,7 @@ div.separator-dash {
     padding: 1.5rem;
     background-color: var(--container-bg-color);
     border-radius: 8px;
+    border: var(--container-outline-color) 1px solid;
 }
 
 .title {
@@ -453,7 +455,7 @@ div.separator-dash {
 
 .weblink-list li a {
     display: block;
-    background-color: var(--body-bg-color);
+    background-color: var(--general-bg-color);
     padding: 0.75rem;
     border-radius: .75rem;
     text-align: center;
@@ -485,7 +487,7 @@ div.separator-dash {
 
 /* (new content) Button styling for a more polished desktop UI */
 .btn {
-    background-color: var(--body-bg-color);
+    background-color: var(--general-bg-color);
     border: 1px solid var(--text-color);
     padding: 0.5rem 1rem;
     border-radius: 5px;
@@ -494,7 +496,7 @@ div.separator-dash {
 
 .btn:hover {
     background-color: var(--text-color);
-    color: var(--body-bg-color);
+    color: var(--general-bg-color);
     text-decoration: none; /* Override the general a:hover underline for buttons */
 }
 
